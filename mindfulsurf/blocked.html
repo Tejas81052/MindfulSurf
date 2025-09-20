@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blocked by MindfulSurf</title>
+    <style>
+      :root {
+        --bg1: #e0f7fa;
+        --bg2: #b2ebf2;
+        --text: #064b52;
+        --accent: #00bcd4;
+        --accent-strong: #0097a7;
+        --danger: #d32f2f;
+        --muted: #4f6b71;
+        --card: #ffffffcc;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg1: #0c1417;
+          --bg2: #0f1c20;
+          --text: #e4f0f2;
+          --accent: #00c7db;
+          --accent-strong: #02a8b9;
+          --danger: #ff6b6b;
+          --muted: #9ab0b6;
+          --card: rgba(10, 18, 21, 0.75);
+        }
+      }
+      body {
+        background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+      }
+      .container {
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+        padding: 40px 32px;
+        text-align: center;
+        max-width: 400px;
+      }
+      h1 {
+        font-family: "Montserrat", Arial, sans-serif;
+        color: var(--danger);
+        font-size: 2.2em;
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+      }
+      .icon {
+        font-size: 3em;
+        margin-bottom: 12px;
+        color: var(--accent);
+      }
+      p {
+        font-size: 1.15em;
+        color: var(--text);
+        margin-bottom: 18px;
+      }
+      .quote {
+        font-size: 1em;
+        color: var(--muted);
+        font-style: italic;
+        margin-top: 18px;
+      }
+      .btn {
+        background: var(--accent);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 24px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 18px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: background 0.2s;
+      }
+      .btn:hover {
+        background: var(--accent-strong);
+      }
+      .btn.secondary {
+        background: transparent;
+        color: var(--accent-strong);
+        border: 1px solid rgba(0, 151, 167, 0.3);
+      }
+      .btn.secondary:hover {
+        background: rgba(0, 188, 212, 0.08);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .chip {
+        display: inline-block;
+        margin-top: 4px;
+        background: rgba(0, 188, 212, 0.12);
+        color: var(--accent-strong);
+        border: 1px solid rgba(0, 151, 167, 0.25);
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+      }
+      .btn-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 14px 0 6px;
+      }
+      .stack {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">🧘‍♂️</div>
+      <h1>Time’s Up!</h1>
+      <p>
+        Your mindful limit for this site has been reached.<br />Come back
+        tomorrow and surf mindfully! ✨
+      </p>
+      <div id="siteDisplay" class="chip"></div>
+      <div class="btn-group" id="snooze-group">
+        <button class="btn" id="snooze-once-btn">Snooze 5 min</button>
+      </div>
+      <div
+        class="muted"
+        id="rest-message"
+        style="display: none; margin-top: 8px"
+      >
+        You’ve used your daily snooze. Time to rest your eyes and take a short
+        break. 🌿
+      </div>
+      <div class="btn-group">
+        <button class="btn" id="open-options-btn">Adjust limits</button>
+        <button class="btn secondary" id="close-tab-btn">Close Tab</button>
+      </div>
+      <div class="quote">
+        “Almost everything will work again if you unplug it for a few minutes,
+        including you.”<br />– Anne Lamott
+      </div>
+    </div>
+    <script src="blocked.js"></script>
+  </body>
+</html>

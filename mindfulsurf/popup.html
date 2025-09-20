@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="popup">
+    <h2>MindfulSurf ⏳</h2>
+    <div class="stack">
+      <input type="text" id="site" placeholder="example.com" />
+      <input type="number" id="limit" placeholder="Minutes per day" />
+      <button id="save">Save</button>
+    </div>
+
+    <h3>Limits</h3>
+    <div class="muted">
+      Defaults can be edited, custom sites can be removed.
+    </div>
+    <ul id="siteList"></ul>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

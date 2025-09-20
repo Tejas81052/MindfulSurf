@@ -135,5 +135,6 @@ MindfulSurf is organized around MV3’s service worker, Declarative Net Request 
 
 Built with JavaScript, HTML, and CSS. Future scope: export/import settings, analytics view, and scheduled pauses.
 
-Team: Sparta
+Team: Sparta.
+
 Team Members: Thimmaiah K K, Rehan, Abdul Ameen
